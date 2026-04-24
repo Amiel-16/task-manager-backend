@@ -19,3 +19,4 @@ def register(payload: RegisterRequest, db: Session = Depends(get_db)):
 def login(payload: LoginRequest, db: Session = Depends(get_db)):
     token = login_user(db, payload)
     return TokenResponse(access_token=token)
+
